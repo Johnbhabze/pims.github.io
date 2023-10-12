@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1920px;
     margin: 0 auto; 
     padding: 5%;
@@ -35,7 +35,7 @@ body {
     text-align: left;
     position: relative;
     max-width: 60%; 
-    margin-top: -20%; 
+    margin-top: -22%; 
     left: -15em;
 }
 
@@ -47,11 +47,11 @@ h2 {
 }
 
 .content h2 {
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .content p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .login {
@@ -110,9 +110,27 @@ h2 {
 
 
 
-
-
-
+@media screen and (max-width: 1400px){
+    .container{
+        max-width: 90%;
+    }
+    .image img {
+        width: 130%;
+        max-width: 150%; 
+        height: auto;
+        display: block;
+    }
+    .content{
+        margin-top: -20%; 
+        left: -7em;
+    }
+    .content h2{
+        font-size: 32px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+}
 
 
 
@@ -133,3 +151,4 @@ h2 {
         left: 0;
     }
 }
+
