@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/G4_PIMS/Dashboard/styles.css">
 </head>
 <body>
     <div class="header">
-        <div class="user-settings"></div>
+        <div class="user-settings">
             <button id="settings-button">Settings</button>
             <button id="logout-button">Logout</button>
         </div>
     </div>
     <div class="content">
-        <button id="select-all-button"> Select All</button>
-        <button id="delete-button">Delete</button>
         <table>
             <thead>
                 <tr>
@@ -24,35 +22,32 @@
                 </tr>
             </thead>
             <tbody id="product-list">
-                <tr>
-                    <td>Product 1</td>
-                    <td>$10 - $20</td>
-                    <td>100</td>
-                    <td>ABC123</td>
-                    <td>
-                        <div class="kebab-menu">
-                            <button class="kebab-button">☰</button>
-                            <div class="kebab-options">
-                                <button class="menu-option">View</button>
-                                <button class="menu-option">Update</button>
-                                <button class="menu-option">Delete</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
                 <!-- Product list items will be dynamically added here -->
             </tbody>
         </table>
     </div>
     <button id="add-new-product-button">Add New Product</button>
     <div class="product-form" id="product-form">
-        <!-- Form to add a new product (hidden by default) -->
-        <input type="text" id="product-name" placeholder="Product Name">
-        <input type="text" id="product-price" placeholder="Price Range">
-        <input type="text" id="product-stocks" placeholder="Stocks">
-        <input type="text" id="product-promo" placeholder="Promo Code">
-        <button id="submit-product">Submit</button>
+        <div class="modal-content">
+            <span class="close" id="close-modal-button">&times;</span>
+            <h2>Add New Product</h2>
+            <input type="text" id="product-name" placeholder="Product Name">
+            <input type="text" id="product-price" placeholder="Price Range">
+            <input type="text" id="product-promo" placeholder="Promo Code">
+            <input type="text" id="product-stocks" placeholder="Stocks">
+            <input type="file" id="product-image" accept="image/*">
+            <button id="reset-product">Reset</button>
+            <hr>
+            <h3>Additional Specifications</h3>
+            <input type="text" id="product-category" placeholder="Category">
+            <input type="text" id="product-brand" placeholder="Brand">
+            <input type="text" id="product-unit" placeholder="Unit">
+            <input type="text" id="product-dimension" placeholder="Dimension">
+            <input type="text" id="product-weight" placeholder="Weight">
+            <textarea id="product-description" placeholder="Description"></textarea>
+            <button id="submit-product">Add Product</button>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/G4_PIMS/Dashboard/script.js"></script>
 </body>
 </html>
