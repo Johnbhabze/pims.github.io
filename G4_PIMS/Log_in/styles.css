@@ -1,0 +1,135 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #EEEEEE;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto; 
+    padding: 5%;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 110%;
+    max-width: 150%; 
+    height: auto;
+    display: block;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    max-width: 60%; 
+    margin-top: -20%; 
+    left: -15em;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #6F7DFF;
+    margin: 0;
+}
+
+.content h2 {
+    font-size: 32px;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+.login {
+    flex: 1;
+    padding: 30px;
+    background: #FFFFFF;
+    text-align: center;
+    border-radius: 30px;
+    max-width: 500px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+
+.login form {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="submit"] {
+    border: 1px solid #287EFF;
+    border-radius: 5px;
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.login input[type="submit"] {
+    background-color: #669AFF;
+    font-family: 'inter';
+    font-weight: 700;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+#createNewAccountButton {
+    display: block; /* Make it a block-level element */
+    background: #51C84F;
+    font-family: 'Inter';
+    font-weight: 700;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin: 20px auto;
+    margin-top: 30px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .image img {
+        margin-top: 0;
+    }
+
+    .content {
+        max-width: 100%; 
+        left: 0;
+    }
+}
