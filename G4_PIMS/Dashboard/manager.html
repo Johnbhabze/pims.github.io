@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/G4_PIMS/Dashboard/styles.css">
+    <link rel="stylesheet" type="text/css" href="/Dashboard/styles.css">
 </head>
 <body>
     <div class="header">
@@ -31,11 +31,21 @@
         <div class="modal-content">
             <span class="close" id="close-modal-button">&times;</span>
             <h2>Add New Product</h2>
+            <div class="image-upload-container">
+                <label for="product-image" class="image-upload">
+                    <input type="file" id="product-image" accept="image/*">
+                    <span class="plus-sign">+</span>
+                </label>
+                <div id="image-preview" class="image-preview"></div>
+            </div>
             <input type="text" id="product-name" placeholder="Product Name">
             <input type="text" id="product-price" placeholder="Price Range">
-            <input type="text" id="product-promo" placeholder="Promo Code">
-            <input type="text" id="product-stocks" placeholder="Stocks">
-            <input type="file" id="product-image" accept="image/*">
+            <div class="quantity-spinner">
+                <input type="text" id="product-promo" placeholder="Promo Code">
+                <button class="decrease-button">-</button>
+                <input type="number" id="product-stocks" placeholder="Stocks" min="0">
+                <button class="increase-button">+</button>
+            </div>
             <button id="reset-product">Reset</button>
             <hr>
             <h3>Additional Specifications</h3>
@@ -48,6 +58,6 @@
             <button id="submit-product">Add Product</button>
         </div>
     </div>
-    <script src="/G4_PIMS/Dashboard/script.js"></script>
+    <script src="/Dashboard/script.js"></script>
 </body>
 </html>
