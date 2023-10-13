@@ -7,9 +7,46 @@ const productPriceInput = document.getElementById("product-price");
 const productPromoInput = document.getElementById("product-promo");
 const productStocksInput = document.getElementById("product-stocks");
 const productList = document.getElementById("product-list");
+const productImageInput = document.getElementById("product-image"); // Add this line
+const imagePreview = document.getElementById("image-preview");
+const resetProductButton = document.getElementById("reset-product");
+const plusSign = document.querySelector(".plus-sign");
+
 
 addProductButton.addEventListener("click", () => {
     productForm.style.display = "block";
+});
+resetProductButton.addEventListener("click", () => {
+    productNameInput.value = "";
+    productPriceInput.value = "";
+    productPromoInput.value = "";
+    productStocksInput.value = "";
+    imagePreview.innerHTML = "";
+});
+
+productImageInput.addEventListener("change", () => {
+    const file = productImageInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            imagePreview.innerHTML = ""; // Clear any previous content
+            const img = document.createElement("img");
+            img.src = e.target.result;
+
+            // Set the width and height to fit in a 2x2 inch box
+            img.style.width = "2in";
+            img.style.height = "2in";
+
+            // Center the image both vertically and horizontally using flexbox
+            img.style.display = "block";
+            img.style.margin = "auto";
+
+            plusSign.style.display = "none";
+
+            imagePreview.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    }
 });
 
 closeModalButton.addEventListener("click", () => {
